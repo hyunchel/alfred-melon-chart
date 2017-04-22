@@ -1,0 +1,32 @@
+{
+  "name": "alfred-melon-chart",
+  "version": "1.0.0",
+  "description": "Alfred Workflow to grab Melon Music Chart.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "test": "ava"
+  },
+  "keywords": [
+    "alfred",
+    "workflow",
+    "melon",
+    "music",
+    "chart"
+  ],
+  "author": {
+    "name": "Hyunchel Kim",
+    "email": "hyunchel.inbox@gmail.com",
+    "url": "http://hyunchel.me"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "alfy": "^0.6.0",
+    "melon-chart-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.3.0",
+    "ava": "^0.19.1"
+  }
+}

@@ -2,7 +2,7 @@ import test from 'ava';
 import alfyTest from 'alfy-test';
 
 // created on 2017-04-21
-const TEST_DATE = '2017/04/21';
+const TEST_DATE = '2017/04/16';
 const TEST_DATA = {
   data: [
     { rank: '1',
@@ -48,7 +48,9 @@ const TEST_DATA = {
 test('default values', async t => {
   const alfy = alfyTest();
 
-  const result = await alfy('  ' + TEST_DATE);
+  // If the first parameter does not make sense, it will use default value.
+  // Parameters are separated by a space, so the first parameter here is a space.
+  const result = await alfy('not-a-date ' + TEST_DATE);
 
   // slice our data to 5 b/c default cutline is 5
   t.deepEqual(result, TEST_DATA.data.slice(0, 5).map(rank => {

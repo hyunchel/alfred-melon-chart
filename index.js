@@ -1,8 +1,13 @@
 const alfy = require('alfy');
-const melonWeekly = require('melon-chart-api');
+const melon = require('melon-chart-api');
 
-const [cutLine, date] = alfy.input.split(' ');
-melonWeekly(date, { cutLine }).then(data => {
+const DEFAULT_CUTLINE = 5;
+
+let [cutLine, date] = alfy.input.split(' ');
+if (isNaN(parseInt(cutLine))) {
+  cutLine = DEFAULT_CUTLINE;
+}
+melon(date, { cutLine }).weekly().then(data => {
   const items = data.data.map(rank => {
     return {
       title: rank.title,

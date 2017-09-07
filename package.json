@@ -1,7 +1,8 @@
 {
   "name": "alfred-melon-chart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Alfred Workflow to grab Melon Music Chart.",
+  "repository": "https://github.com/hyunchel/alfred-melon-chart",
   "main": "index.js",
   "scripts": {
     "postinstall": "alfy-init",
